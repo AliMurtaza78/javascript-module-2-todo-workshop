@@ -1,4 +1,4 @@
-// Exercise 4
+
 
 document.querySelector('#new-todo').addEventListener('submit', (e) => {
     e.preventDefault()
@@ -6,7 +6,7 @@ document.querySelector('#new-todo').addEventListener('submit', (e) => {
     console.log(text)
 })
 
-// Exercise 5
+
 
 let todos = []
 
@@ -58,7 +58,7 @@ document.querySelector('#new-todo').addEventListener('submit', (e) => {
 //     return todoEl
 // }
 
-// Exercise 7 & 8
+
 const renderTodos = (todos) => {
     const todoList = document.querySelector('#todos')
     todoList.innerHTML = ''
@@ -77,7 +77,6 @@ const renderTodos = (todos) => {
 
 renderTodos(todos);
 
-// Exercise 9
 const removeTodo = (title) => {
     const todoIndex = todos.findIndex((todo) => {
         return todo.title.toLowerCase() === title.toLowerCase()
@@ -87,7 +86,7 @@ const removeTodo = (title) => {
     }
 }
 
-//  Exercise 11
+
 const newTodos = {}
 const newCreateTodo = (text) => {
     newTodos.push({
@@ -96,7 +95,7 @@ const newCreateTodo = (text) => {
     })
 }
 
-//Exercise 12
+
 const generateTodoDOM = (todoObj) => {
     const todoEl = document.createElement('label')
     const containerEl = document.createElement('div')
@@ -153,12 +152,12 @@ function filterArray(){
     
 }
 
-//Exercise 18
+
 const saveTodosToLocalStorage = () => {
     localStorage.setItem('todos', JSON.stringify(todos))
 }
 
-//Exercise 19
+
 const fetchTodosFromLocalStorage = () => {
     const todosJSON = localStorage.getItem('todos')
 
